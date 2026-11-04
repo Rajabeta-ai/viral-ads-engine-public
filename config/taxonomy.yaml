@@ -1,0 +1,73 @@
+# Language -> states/regions map used for geo attribution of trends.
+languages:
+  hi:  { name: Hindi,      states: [Uttar Pradesh, Madhya Pradesh, Rajasthan, Delhi, Haryana, Uttarakhand, Chhattisgarh, Himachal Pradesh] }
+  bho: { name: Bhojpuri,   states: [Bihar, Eastern Uttar Pradesh, Jharkhand] }
+  bn:  { name: Bengali,    states: [West Bengal, Tripura, Assam (Barak Valley)] }
+  mr:  { name: Marathi,    states: [Maharashtra, Goa] }
+  gu:  { name: Gujarati,   states: [Gujarat, Daman & Diu] }
+  pa:  { name: Punjabi,    states: [Punjab, Chandigarh, Haryana] }
+  ta:  { name: Tamil,      states: [Tamil Nadu, Puducherry] }
+  te:  { name: Telugu,     states: [Telangana, Andhra Pradesh] }
+  kn:  { name: Kannada,    states: [Karnataka] }
+  ml:  { name: Malayalam,  states: [Kerala, Lakshadweep] }
+  or:  { name: Odia,       states: [Odisha] }
+
+# Hashtag seeds per genre per language. These are the HikerAPI harvest surface.
+seeds:
+  cricket:
+    _global: [cricket, cricketlovers, cricketfever, iplfans, indiancricketteam, cricketmemes, cricketreels, cricketedits, fantasycricket, dream11, cricketanalysis, cricketstats]
+    hi:  [crickethindi, cricketgyan, viratkohlifans, rohitsharmafans, cricketkabaap, ipl2026]
+    bho: [bhojpuricricket, cricketbihar]
+    bn:  [bengalcricket, kkrfans, cricketbengali]
+    mr:  [mumbaiindians, marathicricket, cricketmarathi]
+    gu:  [gujarattitans, gujaraticricket]
+    pa:  [punjabkings, punjabicricket]
+    ta:  [csk, csktrolls, tamilcricket, thaladhoni]
+    te:  [sunrisershyderabad, telugucricket, cricketintelugu]
+    kn:  [rcb, rcbfans, kannadacricket, namma_rcb]
+    ml:  [malayalamcricket, keralacricket, cricketmalayalam]
+    or:  [odishacricket, odiacricket]
+  bhakti:
+    _global: [bhakti, bhaktisong, bhajan, mahadev, krishna, hanumanji, sanatandharma, shivbhakti, ram, devotional, mandir, aarti, godsgrace, spiritualindia, bhaktireels]
+    hi:  [bhaktisongs, hanumanchalisa, radhakrishna, shrikrishna, mahakal, khatushyamji, bhaktimarg, jaishreeram]
+    bho: [bhojpuribhakti, chhathpuja, bhojpuribhajan]
+    bn:  [durgapuja, kalimaa, bengalibhakti, joymaakali]
+    mr:  [vitthal, ganpatibappamorya, marathibhakti, pandharpur, ashadhiwari]
+    gu:  [ambemaa, gujaratibhakti, dwarkadhish, navratrigarba]
+    pa:  [waheguru, gurbani, goldentemple, shabadkirtan]
+    ta:  [murugan, tamilbhakti, ayyappa, tamildevotional, thiruppugazh]
+    te:  [tirumala, venkateswara, telugubhakti, lordvenkateswara]
+    kn:  [kannadabhakti, sriramanavami, udupikrishna, dharmasthala]
+    ml:  [sabarimala, ayyappaswamy, guruvayur, malayalambhakti]
+    or:  [jagannath, jaijagannath, puri, odiabhakti]
+  companionship:
+    _global: [lonelinessquotes, latenightthoughts, relatable, emotionalstatus, breakupstatus, feelings, aloneboy, sadshayari, deeptalks, overthinking, mentalhealthindia, friendshipgoals]
+    hi:  [shayari, hindishayari, dilkibaat, akelapan, sadshayarihindi, dardbharishayari, emotionalshayari]
+    bho: [bhojpurisad, bhojpurishayari]
+    bn:  [banglashayari, banglasad, mondkharap]
+    mr:  [marathiquotes, marathistatus, marathiprem]
+    gu:  [gujaratishayari, gujaratistatus]
+    pa:  [punjabisad, punjabishayari, punjabistatus]
+    ta:  [tamilkavithai, tamilsadsong, tamilfeelings]
+    te:  [telugusad, telugufeelings, teluguquotes]
+    kn:  [kannadasad, kannadaquotes, kannadafeelings]
+    ml:  [malayalamquotes, malayalamsad, malayalamfeelings]
+    or:  [odiasad, odiashayari]
+
+# Example audience archetypes per genre, used to aim each prompt at a specific viewer.
+archetypes:
+  companionship:
+    - { id: night_shift_worker,   label: "Night-shift worker", core_need: "company during late-night hours" }
+    - { id: city_migrant,         label: "Moved to a big city for work", core_need: "someone to talk to after work" }
+    - { id: remote_worker,        label: "Remote worker, isolated at home", core_need: "unstructured non-work conversation" }
+    - { id: long_idle_hours,      label: "Job with long idle hours", core_need: "filling quiet hours" }
+  cricket:
+    - { id: fantasy_player,       label: "Fantasy league player (Dream11/MPL)", core_need: "pre-toss edge, pitch + form data" }
+    - { id: stat_nerd,            label: "Stat-arguing superfan", core_need: "ammunition to win group-chat arguments" }
+    - { id: casual_score_checker, label: "Score-checker, low engagement", core_need: "fastest score, zero friction" }
+    - { id: regional_franchise,   label: "Franchise loyalist (CSK/RCB/MI/KKR)", core_need: "tribal identity content" }
+  bhakti:
+    - { id: daily_ritual,         label: "Daily aarti / paath householder", core_need: "structured daily practice on phone" }
+    - { id: festival_spiker,      label: "Festival-driven observer", core_need: "vrat rules, muhurat, katha on demand" }
+    - { id: diaspora_devotee,     label: "Away from home temple", core_need: "darshan + ritual continuity remotely" }
+    - { id: anxious_seeker,       label: "Seeking answers in crisis", core_need: "ask a question, get scriptural answer" }

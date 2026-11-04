@@ -1,0 +1,42 @@
+# Example apps. These are fictional: replace them with your own app's positioning,
+# differentiators and guardrails. Every Veo prompt is written against one of these entries.
+# Required per app: genre (must match a genre in taxonomy.yaml) and one_liner.
+apps:
+  pitchside:
+    genre: cricket
+    one_liner: "Live scores plus the match analysis a plain score app doesn't give you."
+    differentiators:
+      - "Ball-by-ball scores with match-up and form analysis layered on top"
+      - "Ask a question about tonight's match in plain language"
+    proof_devices: [side-by-side with a plain score app, a pre-match prediction that lands]
+    ad_jobs: [install, first-question-asked]
+    guardrails:
+      - "Never promise fantasy or betting winnings"
+      - "Do not use official league footage, logos, team jerseys or player likeness"
+
+  aarti_plus:
+    genre: bhakti
+    one_liner: "A daily devotional companion: aarti, panchang and katha in your own language."
+    differentiators:
+      - "Daily panchang and festival reminders without searching"
+      - "A personal practice streak, not just a video feed"
+    proof_devices: [festival prep countdown, an elder using it easily]
+    ad_jobs: [install, first-aarti-completed]
+    guardrails:
+      - "Reverent register: no deity parody or comedic deity voices"
+      - "No claims of miracles, cures or fortune outcomes"
+
+  baatcheet:
+    genre: companionship
+    one_liner: "A friendly voice to talk to after a long day."
+    positioning: "A conversation app, not a dating app."
+    differentiators:
+      - "Someone to talk to at any hour"
+      - "Voice-first, in your own language"
+    emotional_jobs: [boredom, venting, being heard, routine company]
+    ad_jobs: [install, first-call-connected]
+    guardrails:
+      - "Never imply romance, dating or meeting in person"
+      - "No sexual or suggestive framing"
+      - "Do not fabricate testimonials or real-person claims"
+      - "Depict adults only"

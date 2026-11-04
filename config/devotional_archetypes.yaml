@@ -1,0 +1,43 @@
+# Example devotional archetype taxonomy. Every harvested bhakti reel is classified against
+# this: which archetype it would serve, which angle, which feature it sells and which
+# emotion fires. Replace it with your own research; keep the vocabularies closed.
+features: [ringtone, wallpaper, mantra, status]
+
+emotional_triggers:
+  - routine_peace           # calm, anchoring, start-the-day steadiness
+  - discipline              # day-of-week observance, vrat, streak
+  - presence                # the deity is here, with me, on my screen
+  - social_currency         # being seen as devout, earning replies and blessings
+  - belonging               # everyone is doing this, I am part of it
+  - readiness               # the occasion is coming, be prepared
+  - longing                 # the temple is far, home is far
+  - care                    # sending a blessing to someone who needs it
+
+archetypes:
+  - id: daily_devotee
+    n: 1
+    label: The Daily Devotee
+    psychology: "Wants a small sacred act to start the day."
+    who: "Adults who keep a daily practice at home."
+    buying: "Routine, calm, a sense of presence at home."
+    features: [ringtone, wallpaper, mantra]
+    fit: both
+    angles:
+      - {id: 1A, hook: "The morning alarm becomes the first prayer of the day",
+         trigger: routine_peace, sells: [ringtone]}
+      - {id: 1B, hook: "Every glance at the phone is a darshan",
+         trigger: presence, sells: [wallpaper]}
+
+  - id: status_sharer
+    n: 2
+    label: The Status Sharer
+    psychology: "Shares devotional content as greeting and identity."
+    who: "Adults active in family and community groups."
+    buying: "Being first with the best morning or festival greeting."
+    features: [status]
+    fit: both
+    angles:
+      - {id: 2A, hook: "Be the one who sends the best good-morning status to the family group",
+         trigger: social_currency, sells: [status]}
+      - {id: 2B, hook: "The festival is tomorrow: have the greeting ready",
+         trigger: readiness, sells: [status]}
